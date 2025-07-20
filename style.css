@@ -1,0 +1,94 @@
+:root {
+  --dark-green: #3E5F44;
+  --medium-green: #5E936C;
+  --light-green: #93DA97;
+  --pale-green: #E8FFD7;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  background-color: var(--pale-green);
+  color: var(--dark-green);
+}
+
+.container {
+  max-width: 500px;
+  background-color: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin: auto;
+  border: 2px solid var(--light-green);
+}
+
+h1, h2 {
+  text-align: center;
+  color: var(--dark-green);
+}
+
+label {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+  color: var(--dark-green);
+}
+
+input,
+select,
+button {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+  border: 2px solid var(--medium-green);
+  border-radius: 6px;
+  outline: none;
+}
+
+input:focus,
+select:focus {
+  border-color: var(--dark-green);
+  background-color: var(--pale-green);
+}
+
+button {
+  background-color: var(--medium-green);
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: var(--dark-green);
+}
+
+#weekday-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+#weekday-options label {
+  background-color: var(--light-green);
+  padding: 5px 10px;
+  border-radius: 6px;
+  font-weight: normal;
+  cursor: pointer;
+}
+
+.hidden {
+  display: none;
+}
+
+ul#preview {
+  list-style-type: disc;
+  padding-left: 20px;
+  background-color: var(--light-green);
+  padding: 10px;
+  border-radius: 8px;
+  margin-top: 10px;
+}

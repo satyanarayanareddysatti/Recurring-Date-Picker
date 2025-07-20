@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Recurring Date Picker</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Recurring Date Picker</h1>
+
+    <!-- Recurrence Type -->
+    <label for="frequency">Repeat:</label>
+    <select id="frequency">
+      <option value="daily">Daily</option>
+      <option value="weekly">Weekly</option>
+      <option value="monthly">Monthly</option>
+      <option value="yearly">Yearly</option>
+    </select>
+
+    <!-- Repeat Every X -->
+    <label for="interval">Every:</label>
+    <input type="number" id="interval" min="1" value="1" />
+    <span id="interval-unit">day(s)</span>
+
+    <!-- Weekday selection (for weekly recurrence) -->
+    <div id="weekday-options" class="hidden">
+      <label><input type="checkbox" value="1" />Mon</label>
+      <label><input type="checkbox" value="2" />Tue</label>
+      <label><input type="checkbox" value="3" />Wed</label>
+      <label><input type="checkbox" value="4" />Thu</label>
+      <label><input type="checkbox" value="5" />Fri</label>
+      <label><input type="checkbox" value="6" />Sat</label>
+      <label><input type="checkbox" value="0" />Sun</label>
+    </div>
+
+    <!-- Start and End Dates -->
+    <label for="start-date">Start Date:</label>
+    <input type="date" id="start-date" />
+
+    <label for="end-date">End Date (optional):</label>
+    <input type="date" id="end-date" />
+
+    <button id="generate">Generate Dates</button>
+
+    <h2>Preview:</h2>
+    <ul id="preview"></ul>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
